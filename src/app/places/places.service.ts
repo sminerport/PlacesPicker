@@ -40,7 +40,6 @@ export class PlacesService {
     if (!prevPlaces.some((p) => p.id === place.id)) {
       this.userPlaces.set([...prevPlaces, place]);
     }
-    this.userPlaces.set([...prevPlaces, place]);
     return this.httpClient
       .put('http://localhost:3000/user-places', {
         placeId: place.id,
